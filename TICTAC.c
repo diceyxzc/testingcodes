@@ -18,27 +18,40 @@ void printWinner(char);
 int main () {
 
     char winner = ' ';
+    char response = ' ';
 
-    resetBoard();
+    do {
 
-    while(winner == ' ' && checkFreeSpaces() != 0) {
-    printBoard();
+        winner = ' ';
+        response = ' ';
+        resetBoard();
 
-    playerMove();
-    winner = checkWinner();
-        if(winner != ' ' || checkFreeSpaces() == 0){
+        while(winner == ' ' && checkFreeSpaces() != 0) {
+            printBoard();
+
+            playerMove();
+                winner = checkWinner();
+                if(winner != ' ' || checkFreeSpaces() == 0){
             break;
         }
-    computerMove();
-    winner = checkWinner();
-        if(winner != ' ' || checkFreeSpaces() == 0){
-            break;
+            computerMove();
+                winner = checkWinner();
+                if(winner != ' ' || checkFreeSpaces() == 0){
+                break;
         }
     }
     
     printBoard();
     printWinner(winner);
 
+    printf("\nWould you like to play again? (Y/N): ");
+    scanf(" %c", &response);
+    response = toupper(response);
+
+    } while (response == 'Y');
+
+    printf("Thanks for Playing!!");
+ 
     return 0;
 }
 
@@ -77,11 +90,11 @@ void playerMove(){
     int y;
 
     do {
-    printf("Enter Row --- (1-3): ");
+    printf("Enter Row [pahiga] (1-3): ");
     scanf("%d", &x);
     x--;
 
-    printf("Enter Column ||| (1-3): ");
+    printf("Enter Column [pataas] (1-3): ");
     scanf("%d", &y);
     y--;
 
