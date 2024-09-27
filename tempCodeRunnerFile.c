@@ -1,2 +1,2 @@
 
-        printf("%d ", array[i]);
+}
