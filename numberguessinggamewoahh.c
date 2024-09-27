@@ -19,7 +19,7 @@ int main() {
         if(guess > answer) {
             printf("Too High!\n");
         } else if(guess < answer) {
-            printf("Toow Low\n");
+            printf("Too Low!\n");
         } else {
             printf("Correct!\n");
         }
@@ -27,8 +27,8 @@ int main() {
     }while(guess != answer);
 
     printf("---------------------");
-    printf("Answer: %d\n", answer);
-    printf("guesses: %d\n", guesses);
+    printf("\nAnswer: %d\n", answer);
+    printf("Guesses: %d\n", guesses);
     printf("---------------------");
 
     return 0;
