@@ -24,6 +24,8 @@ print("")
 
 #more formats of 2 decimal places
 
-print('{:.2f}'.format(math.pi))
-print('{:.2f}'.format(math.e))
-print('{:.2f}'.format(math.sqrt(x)))
+print('Prints pi: {:.2f}'.format(math.pi))
+print('Prints e: {:.2f}'.format(math.e))
+print('Prints square root: {:.2f}'.format(math.sqrt(x)))
+print("Prints rounded up:",math.ceil(x))
+print("Prints rounded down:",math.floor(x))
