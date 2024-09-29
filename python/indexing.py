@@ -1,6 +1,6 @@
 num1 = "1231-23111-3211"
 
-#star : end : step
+#start : end : step
 
 print(f"{num1[:4]}") #starting point
 print(f"{num1[5:10]}")
