@@ -19,7 +19,7 @@ class Employee:
         self.basic_pay = self.emp_rate_per_hour * self.emp_num_of_hours_per_payday
         self.overtime_pay = self.emp_hour_overtime * self.emp_rate_per_hour
         self.emp_gross_earnings = self.basic_pay + self.overtime_pay + self.honorarium_pay
-        self.emp_absences = self.emp_num_of_absences * self.rate_per_hour
+        self.emp_absences = self.emp_num_of_absences * self.emp_rate_per_hour
         self.emp_tardiness = self.emp_num_tardiness * self.emp_rate_per_hour
 
     def emp_sss_contribution(self):
@@ -131,7 +131,7 @@ class Employee:
             self.tax_contribution = ((self.emp_gross_earnings - 333333) * 0.35 + 91770.70)
 
     def emp_total_deduction(self):
-        self.deduction = self.emp_absences + self.emp_tardiness + self.tax_contribution + self.sss_contribution + self.philhealth_contribution + self.hdmf_contribution
+        self.deduction = self.emp_absences + self.emp_tardiness + self.tax_contribution + self.sss_contribution + self.philhealth_contribution + self.hmdf_contribution
 
     def emp_employee_netpay(self):
         self.net_pay = self.emp_gross_earnings - self.deduction
@@ -141,7 +141,7 @@ class Employee:
         print("Employee Department: ", self.employee_department)
         print("Employee Name: ", self.employee_name)
         print("Employee Code: ", self.employee_code)
-        print("Cut-Off Date: ", self.salar_cut_off)
+        print("Cut-Off Date: ", self.salary_cut_off)
         print("Basic Pay: ", self.basic_pay)
         print("Overtime Pay: ", self.overtime_pay)
         print("Gross Income: ", self.emp_gross_earnings)
