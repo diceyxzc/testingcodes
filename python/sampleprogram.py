@@ -103,7 +103,9 @@ class Employee:
             self.sss_contribution = 900.00
         elif self.emp_gross_earnings >= 22750 and self.emp_gross_earnings < 23249.99:
             self.sss_contribution = 900.00
-        elif self.emp_gross_earnings >= 23250 and self.emp_gross_earnings < 24249.99:
+        elif self.emp_gross_earnings >= 23250 and self.emp_gross_earnings < 23749.99:
+            self.sss_contribution = 900.00
+        elif self.emp_gross_earnings >= 23750 and self.emp_gross_earnings < 24249.99:
             self.sss_contribution = 900.00
         elif self.emp_gross_earnings >= 24250 and self.emp_gross_earnings < 24749.99:
             self.sss_contribution = 900.00
@@ -142,15 +144,15 @@ class Employee:
         print("Employee Name: ", self.employee_name)
         print("Employee Code: ", self.employee_code)
         print("Cut-Off Date: ", self.salary_cut_off)
-        print("Basic Pay: ", self.basic_pay)
-        print("Overtime Pay: ", self.overtime_pay)
-        print("Gross Income: ", self.emp_gross_earnings)
-        print("Absences: ", self.emp_absences)
-        print("Tardiness: ", self.emp_tardiness)
-        print("SSS Contribution: ", self.sss_contribution)
-        print("Philhealth Contribution: ", self.philhealth_contribution)
-        print("Total Deduction: ", self.deduction)
-        print("Net Income: ", self.net_pay)
+        print("Basic Pay: %.2f" % self.basic_pay)
+        print("Overtime Pay: %.2f" % self.overtime_pay)
+        print("Gross Income: %.2f" % self.emp_gross_earnings)
+        print("Absences: %.2f" % self.emp_absences)
+        print("Tardiness: %.2f" % self.emp_tardiness)
+        print("SSS Contribution: %.2f" % self.sss_contribution)
+        print("Philhealth Contribution: %.2f" % self.philhealth_contribution)
+        print("Total Deduction: %.2f" % self.deduction)
+        print("Net Income: %.2f" % self.net_pay)
 
 emp1 = Employee()
 emp1.emp_salary_computation()
