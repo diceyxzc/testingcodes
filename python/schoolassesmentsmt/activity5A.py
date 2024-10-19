@@ -50,18 +50,12 @@ class Assessment_Input:
         student_nurturance = float(input("Enter Student Nurturance Fee: "))
         technology_fee = float(input("Enter Technology Fee: "))
         test_papers = float(input("Enter Test Papers Fee: "))
-        other_assessment = float(input("Enter Other Assessment Fee: "))
         downpayment = float(input("Enter Downpayment: "))
-        prelim = float(input("Enter Prelim Fee: "))
-        midterm = float(input("Enter Midterm Fee: "))
-        final = float(input("Enter Final Fee: "))
 
-        student_assessment = obj3.get_student_assesssment(
-            adu_chronical, athletic, audio_visual_library, ausg, cultural_fee, energy_cost,
-            guidance, insurance_fee, learning_management_system, library_fee, medical_dental,
-            registration, rso, student_activities, student_nurturance, technology_fee, test_papers,
-            other_assessment, downpayment, prelim, midterm, final
-        )
+        student_assessment = obj3.get_student_assesssment(adu_chronical, athletic, audio_visual_library, ausg, cultural_fee, energy_cost, guidance, 
+                                                  insurance_fee, learning_management_system, library_fee, medical_dental, registration, rso, 
+                                                  student_activities, student_nurturance, technology_fee, test_papers, downpayment)
+
         obj3.display_assessment()
 
 
