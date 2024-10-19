@@ -1,0 +1,30 @@
+class Course_Outline:
+    def __init__(self):
+        self.student_section = ""
+        self.student_subject = ""
+        self.student_units = 0.00
+        self.tuition_fee_lecture = 1551.00
+        self.unit_tuition_fee = 0.00
+    
+    def get_student_outline(self, student_section, student_subject, student_units):
+        self.student_section = student_section
+        self.student_subject = student_subject
+        self.student_units = student_units
+
+def main():
+    units = int(input("Enter the Number of Subjects: "))
+    subjects = []
+
+    for i in range(units):
+        subject_code = input(f"Enter Subject {i + 1}: ")
+        section = input(f"Enter section for unit {i + 1}: ")
+        course_outline = Course_Outline()
+        course_outline.get_student_outline(section, subject_code, 1)  # Assuming each subject is 1 unit
+        subjects.append(course_outline)
+
+    print("\nSubjects and Sections:")
+    for i, course_outline in enumerate(subjects, start=1):
+        print(f"Unit {i}: Subject Code - {course_outline.student_subject}, Section - {course_outline.student_section}")
+
+if __name__ == "__main__":
+    main()

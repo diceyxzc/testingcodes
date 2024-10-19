@@ -42,5 +42,16 @@ class runcodes:
                 print(food, end=" ")
             print()
 
+    def matchalover():
+        width = 40
+        height = 20
+
+        print("_" * width)
+        
+        for _ in range(height):
+                print("|" + " " * ((width // 2) - 1) + "|" + " " * ((width // 2) - 1) + "|")
+        
+        print("-" * width)
+
 a = runcodes
-a.forloops()
+a.matchalover()
