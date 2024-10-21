@@ -1,8 +1,9 @@
-import activity5
+import rewrite
 class Assessment_Input:
 
     def get_assessment_input(self):
-        obj3 = activity5.Assessment_Amount()
+        obj3 = rewrite.Assessment_Amount()
+        total_units = int(input("Enter Total Units: "))
         adu_chronical = float(input("Enter Adu Chronical: "))
         athletic = float(input("Enter Athletic Fee: "))
         audio_visual_library = float(input("Enter Audio Visual Library Fee: "))
@@ -21,6 +22,8 @@ class Assessment_Input:
         technology_fee = float(input("Enter Technology Fee: "))
         test_papers = float(input("Enter Test Papers Fee: "))
         downpayment = float(input("Enter Downpayment: "))
+
+        total_of_units = obj3.get_tuition_fee_lecture(total_units)
 
         student_assessment = obj3.get_student_assesssment(adu_chronical, athletic, audio_visual_library, ausg, cultural_fee, energy_cost, guidance, 
                                                   insurance_fee, learning_management_system, library_fee, medical_dental, registration, rso, 
