@@ -36,6 +36,7 @@ class Course_Outline:
 
     def tuition_fee_calculation(self, student_units, tuition_fee_lecture):
         self.unit_tuition_fee = student_units * tuition_fee_lecture
+        return self.unit_tuition_fee
 
     def display_student_outline(self, subjects):
         width = 50
@@ -43,6 +44,7 @@ class Course_Outline:
         for i, course_outline in enumerate(subjects, start=1):
             print(f"Subject Code: {course_outline.student_subject} \t| Section: {course_outline.student_section}")
         print("-" * width)
+        print(f"{self.unit_tuition_fee}")
 
 class Assessment_Amount:
     def __init__(self):
@@ -74,47 +76,73 @@ class Assessment_Amount:
                                 ausg, cultural_fee, energy_cost, guidance, insurance_fee,
                                 learning_management_system, library_fee, medical_dental,
                                 registration, rso, student_activities, student_nurturance,
-                                technology_fee, test_papers, other_assessment):
+                                technology_fee, test_papers, downpayment):
         
-        self.other_assessment = adu_chronical + athletic + audio_visual_library + ausg + cultural_fee 
-        + energy_cost + guidance + insurance_fee + learning_management_system + library_fee + medical_dental 
-        + registration + rso + student_activities + student_nurturance + technology_fee + test_papers + other_assessment 
+        self.adu_chronical = adu_chronical
+        self.athletic = athletic
+        self.audio_visual_library = audio_visual_library
+        self.ausg = ausg
+        self.cultural_fee = cultural_fee
+        self.energy_cost = energy_cost
+        self.guidance = guidance
+        self.insurance_fee = insurance_fee
+        self.learning_management_system = learning_management_system
+        self.library_fee = library_fee
+        self.medical_dental = medical_dental
+        self.registration = registration
+        self.rso = rso
+        self.student_activities = student_activities
+        self.student_nurturance = student_nurturance
+        self.technology_fee = technology_fee
+        self.test_papers = test_papers
 
-        return self.other_assessment
+        self.other_assessment = (adu_chronical + athletic + audio_visual_library + ausg + cultural_fee 
+        + energy_cost + guidance + insurance_fee + learning_management_system + library_fee + medical_dental 
+        + registration + rso + student_activities + student_nurturance + technology_fee + test_papers)
+
+        self.total_due = self.other_assessment - downpayment
+        self.downpayment = downpayment
+
+        return {
+            "other_assessment": self.other_assessment,
+            "total_due": self.total_due
+        }
     
-    def get_total_due(self, downpayment, other_assessment):
-        self.total_due = other_assessment - downpayment
-        return self.total_due
-    
-    def three_terms_total(self, totaldue):
-        self.prelim = totaldue / 3
-        self.midterm = totaldue / 3
-        self.final = totaldue / 3
-        
-        return self.prelim, self.midterm, self.final
+    def three_terms_total(self, total_due):
+        term_amount = total_due / 3
+        self.prelim = term_amount
+        self.midterm = term_amount
+        self.final = term_amount
+
+        return {
+            "prelim": self.prelim,
+            "midterm": self.midterm,
+            "final": self.final
+        }
+
     
     def display_assessment(self):
         print("\nAssessment Input Summary:")
-        print(f"Adu Chronical: {self.adu_chronical}")
-        print(f"Athletic Fee: {self.athletic}")
-        print(f"Audio Visual Library Fee: {self.audio_visual_library}")
-        print(f"AUSG Fee: {self.ausg}")
-        print(f"Cultural Fee: {self.cultural_fee}")
-        print(f"Energy Cost: {self.energy_cost}")
-        print(f"Guidance Fee: {self.guidance}")
-        print(f"Insurance Fee: {self.insurance_fee}")
-        print(f"Learning Management System Fee: {self.learning_management_system}")
-        print(f"Library Fee: {self.library_fee}")
-        print(f"Medical Dental Fee: {self.medical_dental}")
-        print(f"Registration Fee: {self.registration}")
-        print(f"RSO Fee: {self.rso}")
-        print(f"Student Activities Fee: {self.student_activities}")
-        print(f"Student Nurturance Fee: {self.student_nurturance}")
-        print(f"Technology Fee: {self.technology_fee}")
-        print(f"Test Papers Fee: {self.test_papers}")
-        print(f"Assessment Amount: {self.other_assessment}")
-        print(f"Downpayment: {self.downpayment}")
-        print(f"Total Due: {self.total_due}")
-        print(f"Prelim Fee: {self.prelim}")
-        print(f"Midterm Fee: {self.midterm}")
-        print(f"Final Fee: {self.final}")
+        print(f"Adu Chronical: {self.adu_chronical:.2f}")
+        print(f"Athletic Fee: {self.athletic:.2f}")
+        print(f"Audio Visual Library Fee: {self.audio_visual_library:.2f}")
+        print(f"AUSG Fee: {self.ausg:.2f}")
+        print(f"Cultural Fee: {self.cultural_fee:.2f}")
+        print(f"Energy Cost: {self.energy_cost:.2f}")
+        print(f"Guidance Fee: {self.guidance:.2f}")
+        print(f"Insurance Fee: {self.insurance_fee:.2f}")
+        print(f"Learning Management System Fee: {self.learning_management_system:.2f}")
+        print(f"Library Fee: {self.library_fee:.2f}")
+        print(f"Medical Dental Fee: {self.medical_dental:.2f}")
+        print(f"Registration Fee: {self.registration:.2f}")
+        print(f"RSO Fee: {self.rso:.2f}")
+        print(f"Student Activities Fee: {self.student_activities:.2f}")
+        print(f"Student Nurturance Fee: {self.student_nurturance:.2f}")
+        print(f"Technology Fee: {self.technology_fee:.2f}")
+        print(f"Test Papers Fee: {self.test_papers:.2f}")
+        print(f"Assessment Amount: {self.other_assessment:.2f}")
+        print(f"Downpayment: {self.downpayment:.2f}")
+        print(f"Total Due: {self.total_due:.2f}")
+        print(f"Prelim Fee: {self.prelim:.2f}")
+        print(f"Midterm Fee: {self.midterm:.2f}")
+        print(f"Final Fee: {self.final:.2f}")

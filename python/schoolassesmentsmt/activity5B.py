@@ -26,6 +26,7 @@ class Course_Outline_Input:
             course_outline.get_student_outline(section, subject, 1)
             subjects.append(course_outline)
 
+        tuition_fee = obj2.unit_tuition_fee(units)
         obj2.display_student_outline(subjects)
 
 a = Student_Info_Input()

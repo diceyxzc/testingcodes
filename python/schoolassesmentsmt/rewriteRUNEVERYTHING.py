@@ -1,8 +1,41 @@
-import activity5
+import rewrite
+
+class Student_Info_Input:
+    
+    def get_student_input(self):
+        obj = rewrite.Student_Info()
+        name = input("Student Name: ")
+        course = input("Student Course: ")
+        number = input("Student Number: ")
+        academic_year = input("Academic Year: ")
+        printed_date = input("Date Printed: ")
+
+        student_data = obj.get_student_data(name, course, number, academic_year, printed_date)
+        obj.display_student_data()
+
+class Course_Outline_Input:
+    def get_student_outline(self):
+        obj2 = rewrite.Course_Outline()
+        total_subjects = int(input("Enter the Number of Subjects: "))
+        subjects = []
+
+        for i in range(total_subjects):
+            subject = input(f"Enter Subject {i + 1}: ")
+            units = int(input(f"Enter No.s of Unit {i + 1}: "))
+            section = input(f"Enter Section for the Subject {i + 1}: ")
+            course_outline = rewrite.Course_Outline()
+            course_outline.get_student_outline(total_subjects, section, units, subject)
+            subjects.append(course_outline)
+
+        total_subjects_get = obj2.tuition_fee_calculation(total_subjects)
+        obj2.total_units_calculation(units)
+        obj2.display_student_outline(subjects)
+
+import rewrite
 class Assessment_Input:
 
     def get_assessment_input(self):
-        obj3 = activity5.Assessment_Amount()
+        obj3 = rewrite.Assessment_Amount()
         adu_chronical = float(input("Enter Adu Chronical: "))
         athletic = float(input("Enter Athletic Fee: "))
         audio_visual_library = float(input("Enter Audio Visual Library Fee: "))
@@ -27,6 +60,12 @@ class Assessment_Input:
                                                   student_activities, student_nurturance, technology_fee, test_papers, downpayment)
 
         obj3.display_assessment()
+
+a = Student_Info_Input()
+a.get_student_input()
+
+a = Course_Outline_Input()
+a.get_student_outline()
 
 a = Assessment_Input()
 a.get_assessment_input()

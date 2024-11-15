@@ -33,7 +33,7 @@ class Assessment_Input:
 
     def get_assessment_input(self):
         obj3 = activity5.Assessment_Amount()
-        adu_chronical = input("Enter Adu Chronical: ")
+        adu_chronical = float(input("Enter Adu Chronical: "))
         athletic = float(input("Enter Athletic Fee: "))
         audio_visual_library = float(input("Enter Audio Visual Library Fee: "))
         ausg = float(input("Enter AUSG Fee: "))
