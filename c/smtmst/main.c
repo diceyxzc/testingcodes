@@ -596,6 +596,8 @@ int addFlightReport() {
 int flightModifier() {
     char response[10];
 
+    while (getchar() != '\n');
+
     while (1) {
         clearScreen();
         printf("|========================================|\n");
@@ -637,6 +639,8 @@ int deleteFlightRecords() {
         printf("Error! Unable to open %s for reading.\n", FILENAME);
         return 1;
     }
+
+    while (getchar() != '\n');
 
     clearScreen();
     printf("|=======================================|\n");

@@ -18,4 +18,18 @@ Name: RYLLE
 Passenger Class: ECONOMY
 Seat Number: A03
 Booking: Y
+|=======Flight 4=======|
+| Total Passengers: 2  |
+========================
+--Passenger 1--
+Name: CALVIN
+Passenger Class: ECONOMY
+Seat Number: A01
+Booking: Y
+========================
+--Passenger 2--
+Name: DELA CRUZ
+Passenger Class: ECONOMY
+Seat Number: A02
+Booking: Y
 ========================
