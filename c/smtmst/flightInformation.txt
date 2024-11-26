@@ -1,10 +1,3 @@
-Flight Number:
-f78
-Flight Availability:
-y
-Seat Availability:
-12
-Destination:
-london
-Schedule of Flight:
-nov 12
+| Flight Number: BOEINGLMN1		| Flight Availability: Y	| Seat Availability: 120		| Flight Destination: JPN TO LNDN		| Date of Flight: NOVEMBER 14 2024		| Time of Flight: 9 AM	| Arrival: 8 PM
+| Flight Number: BOEING1CN0		| Flight Availability: Y	| Seat Availability: 90			| Flight Destination: PHI TO SG			| Date of Flight: NOVEMBER 14 2024		| Time of Flight: 10 AM	| Arrival: 2 PM
+| Flight Number: PHILAIR01C		| Flight Availability: Y	| Seat Availability: 140		| Flight Destination: MOSC TO RUS		| Date of Flight: NOVEMBER 14 2024		| Time of Flight: 2 AM	| Arrival: 8 AM

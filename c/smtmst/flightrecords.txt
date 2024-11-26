@@ -1,0 +1,12 @@
+--Flight Number: BOEINGLMN1--
+============================
+| Flight Status: ACTIVE
+| Flight Report: WEATHER IS OPTIMAL
+| Time of Report: Tue Nov 26 17:55:58 2024
+____________________________
+--Flight Number: PHILAIR01C--
+============================
+| Flight Status: DELAYED
+| Flight Report: SUDDEN CHANGES IN WEATHER PATTERNS
+| Time of Report: Tue Nov 26 17:56:13 2024
+____________________________

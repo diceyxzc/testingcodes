@@ -31,18 +31,54 @@ int passengerInput();
 
 // Misc.
 
+int loginMenu();
 int mainMenu();
 void clearScreen();
 
 int main() {
 
-	mainMenu();
+	loginMenu();
+    return 0;
+}
+
+int loginMenu() {
+    const char correctUsername[] = "ADMIN";
+    const char correctPassword[] = "12345";
+
+    char inputUsername[50];
+    char inputPassword[50];
+
+    clearScreen();
+    printf("=============================================\n");
+    printf("WELCOME TO CALVIN'S AIRLINE MANAGEMENT SYSTEM\n");
+    printf("=============================================\n");
+    printf("------------ENTER LOGIN CREDENTIALS----------\n");
+    printf("_____________________________________________\n");
+
+    while (1) {
+        printf("Enter Admin Username: ");
+        scanf("%49s", inputUsername); 
+
+        printf("Enter Password: ");
+        scanf("%49s", inputPassword); 
+
+        if (strcmp(inputUsername, correctUsername) == 0 && strcmp(inputPassword, correctPassword) == 0) {
+            printf("\nLogin successful!\n");
+            mainMenu();
+            break; 
+        } else {
+            printf("Invalid username or password. Please try again.\n");
+            break;
+        }
+    }
     return 0;
 }
 
 int mainMenu() {
     char response[10];
 	
+    while (getchar() != '\n');
+    
     clearScreen();
     while (1) {
         printf("|========================================|\n");
@@ -568,6 +604,7 @@ int flightModifier() {
         printf("| 1. DELETE FLIGHT RECORDS               |\n");
         printf("| 2. UPDATE FLIGHT RECORDS               |\n");
         printf("| 0. EXIT                                |\n");
+        printf("|----------------------------------------|\n");
         printf("Enter Category (0-2): ");
 
         fgets(response, sizeof(response), stdin);
@@ -664,7 +701,7 @@ int deleteFlightRecords() {
     fclose(file);
 
     printf("=========================================\n");
-    printf("| Flight %d Record Deleted Successfully!  |\n", delete_line);
+    printf("| Flight %d Record Deleted Successfully! |\n", delete_line);
     printf("=========================================\n");
     printf("| Press 1 to Return to Menu: ");
     while (getchar() != '1'); 

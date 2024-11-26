@@ -1,7 +1,21 @@
-Passenger 1:
-Passenger Name:
-calvin
-Passenger Seat Number:
-f12
-Passenger Booking:
-n
+|=======Flight 1=======|
+| Total Passengers: 3  |
+========================
+--Passenger 1--
+Name: CALVIN
+Passenger Class: ECONOMY
+Seat Number: A01
+Booking: Y
+========================
+--Passenger 2--
+Name: LEANNE
+Passenger Class: ECONOMY
+Seat Number: A02
+Booking: Y
+========================
+--Passenger 3--
+Name: RYLLE
+Passenger Class: ECONOMY
+Seat Number: A03
+Booking: Y
+========================
