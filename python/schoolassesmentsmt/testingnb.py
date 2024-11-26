@@ -19,7 +19,7 @@ class Student_Info_Input:
             units = int(input(f"Enter No.s of Unit {i + 1}: "))
             section = input(f"Enter Section for the Subject {i + 1}: ")
             course_outline = rewriteexperiemtn.Student_Info()
-            course_outline.get_student_outline(total_subjects, section, units, subject)
+            course_outline.get_course_outline(total_subjects, section, units, subject)
             subjects.append(course_outline)
 
         student_data = obj.get_student_data(name, course, number, academic_year, printed_date)

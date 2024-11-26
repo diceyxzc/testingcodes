@@ -3,7 +3,7 @@ import rewriteexperiemtn
 class Assessment_Input:
 
     def get_assessment_input(self):
-        obj3 = rewriteexperiemtn.Assessment_Amount()
+        obj2 = rewriteexperiemtn.Assessment_Amount()
         print("| STUDENT ASSESSMENT |")
         total_units = int(input("Enter Total Units: "))
         adu_chronical = float(input("Enter Adu Chronical: "))
@@ -25,13 +25,13 @@ class Assessment_Input:
         test_papers = float(input("Enter Test Papers Fee: "))
         downpayment = float(input("Enter Downpayment: "))
 
-        total_of_units = obj3.get_tuition_fee_lecture(total_units)
+        total_of_units = obj2.get_tuition_fee_lecture(total_units)
 
-        student_assessment = obj3.get_student_assesssment(adu_chronical, athletic, audio_visual_library, ausg, cultural_fee, energy_cost, guidance, 
+        student_assessment = obj2.get_student_assesssment(adu_chronical, athletic, audio_visual_library, ausg, cultural_fee, energy_cost, guidance, 
                                                   insurance_fee, learning_management_system, library_fee, medical_dental, registration, rso, 
                                                   student_activities, student_nurturance, technology_fee, test_papers, downpayment)
 
-        obj3.display_assessment()
+        obj2.display_assessment()
 
 assessment_amount = Assessment_Input()
 assessment_amount.get_assessment_input()

@@ -22,7 +22,7 @@ class Student_Info:
         self.academic_year = academic_year
         self.printed_date = printed_date
     
-    def get_student_outline(self, student_total_subjects, student_section, student_units, student_subject):
+    def get_course_outline(self, student_total_subjects, student_section, student_units, student_subject):
         self.student_total_subjects = student_total_subjects
         self.student_section = student_section
         self.student_units = student_units
@@ -161,8 +161,10 @@ class Assessment_Amount:
         print(f"| TEST PAPERS     \t\t: {self.test_papers:<{width}.2f} |")
         print(f"| Assessment Amount \t\t: {self.other_assessment:<{width}.2f} |")
         print(f"| Downpayment \t\t\t: {self.downpayment:<{width}.2f} |")
+        print("-" * 48)
         print(f"| Total Due \t\t\t: {self.total_due:<{width}.2f} |")
         print("-" * 48)
+        print("|\t       Schedule Of Payment\t       |")
         print(f"| PRELIM     \t\t\t: {self.prelim:<{width}.2f} |")
         print(f"| MIDTERM     \t\t\t: {self.midterm:<{width}.2f} |")
         print(f"| FINAL     \t\t\t: {self.final:<{width}.2f} |")

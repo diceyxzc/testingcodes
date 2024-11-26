@@ -1,0 +1,10 @@
+Flight Number:
+f78
+Flight Availability:
+y
+Seat Availability:
+12
+Destination:
+london
+Schedule of Flight:
+nov 12
