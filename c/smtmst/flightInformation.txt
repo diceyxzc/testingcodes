@@ -1,3 +1,4 @@
 | Flight Number: BOEINGLMN1		| Flight Availability: Y	| Seat Availability: 120		| Flight Destination: JPN TO LNDN		| Date of Flight: NOVEMBER 14 2024		| Time of Flight: 9 AM	| Arrival: 8 PM
 | Flight Number: BOEING1CN0		| Flight Availability: Y	| Seat Availability: 90			| Flight Destination: PHI TO SG			| Date of Flight: NOVEMBER 14 2024		| Time of Flight: 10 AM	| Arrival: 2 PM
 | Flight Number: PHILAIR01C		| Flight Availability: Y	| Seat Availability: 140		| Flight Destination: MOSC TO RUS		| Date of Flight: NOVEMBER 14 2024		| Time of Flight: 3 AM	| Arrival: 9 AM
+| Flight Number: AIRASIA01B		| Flight Availability: Y	| Seat Availability: 100		| Flight Destination: MARS TO EARTH		| Date of Flight: NOVEMBER 25 2024		| Time of Flight: 9 PM	| Arrival: 10 PM

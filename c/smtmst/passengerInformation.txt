@@ -28,8 +28,8 @@ Seat Number: A01
 Booking: Y
 ========================
 --Passenger 2--
-Name: DELA CRUZ
-Passenger Class: ECONOMY
-Seat Number: A02
+Name: CHARISE
+Passenger Class: BUSINESS
+Seat Number: A01
 Booking: Y
 ========================

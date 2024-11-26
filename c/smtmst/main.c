@@ -596,8 +596,6 @@ int addFlightReport() {
 int flightModifier() {
     char response[10];
 
-    while (getchar() != '\n');
-
     while (1) {
         clearScreen();
         printf("|========================================|\n");
@@ -883,7 +881,7 @@ int updateFlightRecords() {
             response[strcspn(response, "\n")] = 0; 
 
             if (strcmp(response, "1") == 0) {
-                flightStatus();
+                flightModifier();
                 break; 
             } else {
                 printf("Invalid input. Please press 1 to return to the main menu.\n");
