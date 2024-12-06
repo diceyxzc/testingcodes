@@ -1,15 +1,5 @@
-class MyClass:
-    def __init__(self):
-        self.total_units = 0
-        
-    def total_units_calculation(self, units):
-        self.total_units += units
-        return self.total_units
+name = "BILLING SUMMARY"
 
-# Create an object
-obj = MyClass()
+result = len(name)
 
-# Add units one by one
-print(obj.total_units_calculation(3))  # Output: 3
-print(obj.total_units_calculation(2))  # Output: 5
-print(obj.total_units_calculation(1))  # Output: 6
+print(f"{result}")
